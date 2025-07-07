@@ -102,7 +102,7 @@ const App = () => {
       {
         company: "Pernand Presta",
         position: "Vineyard and field worker",
-        period: "March 2024 - March 2025",
+        period: "november 2024 - March 2025",
         description: "General work in vineyards and gardens: grape harvesting, leaf pruning, loading/unloading, tomato/potato/bean harvesting, and garden maintenance. Experience adquired in Beaune, France."
       }
     ],
