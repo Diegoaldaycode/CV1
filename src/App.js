@@ -1,11 +1,9 @@
-// Archivo App.js with expanded main image and no border
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Particles } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaMoon, FaSun, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import profileImage from './assets/commis.jpg';
 import './App.css';
 
@@ -13,6 +11,7 @@ import gallery1 from './assets/gallery1.jpg';
 import gallery2 from './assets/gallery2.jpg';
 import gallery3 from './assets/gallery3.jpg';
 import gallery4 from './assets/gallery4.jpg';
+import huerto1 from './assets/huerto1.jpg';
 
 import video1 from './assets/video1.mp4';
 import video2 from './assets/video2.mp4';
@@ -23,7 +22,7 @@ const Section = ({ id, title, children }) => (
     <div className="container">
       <div className="section-header" data-aos="fade-up">
         <h2 className="section-title">
-          <span className="title-number">0{['about', 'experience', 'skills', 'projects', 'contact'].indexOf(id) + 1}.</span>
+          <span className="title-number">0{['about', 'experience', 'skills', 'contact'].indexOf(id) + 1}.</span>
           {title}
         </h2>
         <div className="section-divider"></div>
@@ -90,22 +89,22 @@ const App = () => {
     name: "Diego Alday",
     profession: "General vineyard worker",
     email: "aldaydiego12@gmail.com",
-    aboutShort: "My name is Diego Alday, I am 30 years old, and I have experience working in vineyards.",
-    about: "My name is Diego Alday, I am 30 years old, and I have work experience in vineyards. I spent 4 months working in Beaune, France, where I was involved in tasks such as vine leaf trimming, grape harvesting, and loading and unloading fruit. This experience allowed me to gain practical knowledge in viticultural work, while also strengthening my sense of responsibility, commitment, and ability to work as part of a team. I have an intermediate B1 level of English, allowing me to communicate effectively in work-related situations.",
+    about: "My name is Diego Alday, I am 30 years old, and I have work experience in vineyards. I spent 4 months working in Beaune, France, where I was involved in tasks such as vine leaf trimming, grape harvesting, and loading and unloading fruit. Additionally, I have experience in agricultural field work such as harvesting tomatoes, potatoes, and beans, as well as general maintenance of vegetable gardens.",
     gallery: [
       { src: gallery1, alt: "Vineyard image 1", caption: "" },
       { src: gallery2, alt: "Vineyard image 2", caption: "" },
       { src: gallery3, alt: "Vineyard image 3", caption: "" },
-      { src: gallery4, alt: "Vineyard image 4", caption: "" }
+      { src: gallery4, alt: "Vineyard image 4", caption: "" },
+      { src: huerto1, alt: "Huerto trabajo 1", caption: "Harvesting tomatoes and potatoes" },
     ],
     videos: [video1, video2, video3],
     experiences: [
       {
         company: "Pernand Presta",
-        position: "General vineyard helper",
-        period: "December 2024 - March 2025",
-        description: "Grape harvesting, vine leaf trimming, and loading/unloading fruit."
-      },
+        position: "Vineyard and field worker",
+        period: "March 2024 - March 2025",
+        description: "General work in vineyards and gardens: grape harvesting, leaf pruning, loading/unloading, tomato/potato/bean harvesting, and garden maintenance. Experience adquired in Beaune, France."
+      }
     ],
     skills: [
       { name: "Pruning and Leaf Trimming", icon: "✂️" },
@@ -113,7 +112,11 @@ const App = () => {
       { name: "Fruit Sorting", icon: "📦" },
       { name: "Loading and Unloading", icon: "🚜" },
       { name: "Teamwork", icon: "🤝" },
-      { name: "Physical Stamina", icon: "💪" }
+      { name: "Physical Stamina", icon: "💪" },
+      { name: "Tomato Harvesting", icon: "🍅" },
+      { name: "Potato Harvesting", icon: "🥔" },
+      { name: "Bean Harvesting", icon: "🫘" },
+      { name: "Garden Maintenance", icon: "🌱" }
     ],
     phoneDisplay: "+33 7 59 63 65 02",
     whatsappLink: "https://wa.me/33759636502"
@@ -170,14 +173,15 @@ const App = () => {
           <div className="logo">DA</div>
           <nav className="sidebar-nav">
             <ul>
-              {['about', 'experience', 'skills', 'projects', 'contact'].map((item) => (
+              {['about', 'experience', 'skills', 'contact'].map((item) => (
                 <li key={item} className={activeSection === item ? 'active' : ''}>
                   <a href={`#${item}`}>
-                    {item === 'about' && 'About Me'}
-                    {item === 'experience' && 'Experience'}
-                    {item === 'skills' && 'Skills'}
-                    {item === 'projects' && 'Projects'}
-                    {item === 'contact' && 'Contact'}
+                    {{
+                      about: 'About Me',
+                      experience: 'Experience',
+                      skills: 'Skills',
+                      contact: 'Contact'
+                    }[item]}
                   </a>
                 </li>
               ))}
@@ -197,7 +201,6 @@ const App = () => {
                 <h4>Hello, my name is</h4>
                 <h1>{personalInfo.name}</h1>
                 <h2>{personalInfo.profession}</h2>
-                {/* Removed the about long text here to avoid repetition */}
               </div>
               <div className="hero-image-wrapper" data-aos="fade-left">
                 <div className="hero-image-container">
@@ -240,20 +243,20 @@ const App = () => {
               {personalInfo.email}
             </a>
             <br />
-            <a 
-              href={personalInfo.whatsappLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="whatsapp-button" 
-              style={{ 
-                display: 'inline-block', 
-                marginTop: '15px', 
-                padding: '10px 20px', 
-                backgroundColor: '#25D366', 
-                color: 'white', 
-                borderRadius: '5px', 
-                textDecoration: 'none', 
-                fontWeight: 'bold' 
+            <a
+              href={personalInfo.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-button"
+              style={{
+                display: 'inline-block',
+                marginTop: '15px',
+                padding: '10px 20px',
+                backgroundColor: '#25D366',
+                color: 'white',
+                borderRadius: '5px',
+                textDecoration: 'none',
+                fontWeight: 'bold'
               }}
             >
               WhatsApp: {personalInfo.phoneDisplay}
