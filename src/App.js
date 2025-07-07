@@ -89,13 +89,13 @@ const App = () => {
     name: "Diego Alday",
     profession: "General vineyard worker",
     email: "aldaydiego12@gmail.com",
-    about: "My name is Diego Alday, I am 30 years old, and I have work experience in vineyards. I spent 4 months working in Beaune, France, where I was involved in tasks such as vine leaf trimming, grape harvesting, and loading and unloading fruit. Additionally, I have experience in agricultural field work such as harvesting tomatoes, potatoes, and beans, as well as general maintenance of vegetable gardens.",
+    about: "My name is Diego Alday, I am 30 years old and I speak english at a B1, I have work experience in vineyards. I spent 4 months working in Beaune, France, where I was involved in tasks such as vine leaf trimming, grape harvesting, and loading and unloading fruit. Additionally, I have experience in agricultural field work such as harvesting tomatoes, potatoes, and beans, as well as general maintenance of vegetable gardens.",
     gallery: [
       { src: gallery1, alt: "Vineyard image 1", caption: "" },
       { src: gallery2, alt: "Vineyard image 2", caption: "" },
       { src: gallery3, alt: "Vineyard image 3", caption: "" },
       { src: gallery4, alt: "Vineyard image 4", caption: "" },
-      { src: huerto1, alt: "Huerto trabajo 1", caption: "Harvesting tomatoes and potatoes" },
+      { src: huerto1, alt: " trabajo 1", caption: "Harvesting tomatoes and potatoes" },
     ],
     videos: [video1, video2, video3],
     experiences: [
