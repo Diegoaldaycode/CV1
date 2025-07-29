@@ -4,14 +4,14 @@ import { loadSlim } from "@tsparticles/slim";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import profileImage from './assets/commis.jpg';
+import profileImage from './assets/huerto1.jpeg';
 import './App.css';
 
-import gallery1 from './assets/gallery1.jpg';
-import gallery2 from './assets/gallery2.jpg';
-import gallery3 from './assets/gallery3.jpg';
-import gallery4 from './assets/gallery4.jpg';
-import huerto1 from './assets/huerto1.jpg';
+import gallery1 from './assets/gallery1.jpeg';
+import gallery2 from './assets/gallery2.jpeg';
+import gallery3 from './assets/gallery3.jpeg';
+import gallery4 from './assets/gallery4.jpeg';
+import huerto1 from './assets/huerto1.jpeg';
 
 import video1 from './assets/video1.mp4';
 import video2 from './assets/video2.mp4';
@@ -86,41 +86,53 @@ const App = () => {
   const [activeSection, setActiveSection] = useState('about');
 
   const personalInfo = {
-    name: "Diego Alday",
-    profession: "General vineyard worker",
-    email: "aldaydiego12@gmail.com",
-    about: "My name is Diego Alday, I am 30 years old and I speak english at a B1, I have work experience in vineyards. I spent 4 months working in Beaune, France, where I was involved in tasks such as vine leaf trimming, grape harvesting, and loading and unloading fruit. Additionally, I have experience in agricultural field work such as harvesting tomatoes, potatoes, and beans, as well as general maintenance of vegetable gardens.",
-    gallery: [
-      { src: gallery1, alt: "Vineyard image 1", caption: "" },
-      { src: gallery2, alt: "Vineyard image 2", caption: "" },
-      { src: gallery3, alt: "Vineyard image 3", caption: "" },
-      { src: gallery4, alt: "Vineyard image 4", caption: "" },
-      { src: huerto1, alt: " trabajo 1", caption: "Harvesting tomatoes and potatoes" },
-    ],
-    videos: [video1, video2, video3],
-    experiences: [
-      {
-        company: "Pernand Presta",
-        position: "Vineyard and field worker",
-        period: "november 2024 - March 2025",
-        description: "General work in vineyards and gardens: grape harvesting, leaf pruning, loading/unloading, tomato/potato/bean harvesting, and garden maintenance. Experience adquired in Beaune, France."
-      }
-    ],
-    skills: [
-      { name: "Pruning and Leaf Trimming", icon: "✂️" },
-      { name: "Grape Harvesting", icon: "🍇" },
-      { name: "Fruit Sorting", icon: "📦" },
-      { name: "Loading and Unloading", icon: "🚜" },
-      { name: "Teamwork", icon: "🤝" },
-      { name: "Physical Stamina", icon: "💪" },
-      { name: "Tomato Harvesting", icon: "🍅" },
-      { name: "Potato Harvesting", icon: "🥔" },
-      { name: "Bean Harvesting", icon: "🫘" },
-      { name: "Garden Maintenance", icon: "🌱" }
-    ],
-    phoneDisplay: "+33 7 59 63 65 02",
-    whatsappLink: "https://wa.me/33759636502"
-  };
+  name: "Diego Alday",
+  profession: "Commis de Cuisine",
+  email: "aldaydiego12@gmail.com",
+  about: "My name is Diego Alday, I am 30 years old and I speak English at a B1 level. I have professional kitchen experience in both Mexico and France. I recently worked as a commis de cuisine in Reims under a Work and Holiday visa, where I performed tasks at the cold, hot, and dessert stations. I also have experience preparing traditional Mexican dishes and working in an Argentinian steakhouse. I am passionate about culinary arts, disciplined, and committed to maintaining high hygiene and food safety standards. I am currently seeking new opportunities that allow me to discover new cultures and take on personal challenges. I am open and available for relocation.",
+  gallery: [
+    { src: gallery1, alt: "Vineyard image 1", caption: "" },
+    { src: gallery2, alt: "Vineyard image 2", caption: "" },
+    { src: gallery3, alt: "Vineyard image 3", caption: "" },
+    { src: gallery4, alt: "Vineyard image 4", caption: "" },
+    { src: huerto1, alt: "Garden work", caption: "" },
+  ],
+  videos: [video1, video2, video3],
+  experiences: [
+    {
+      company: "Au Bureau Reims Cathédrale",
+      position: "Commis de Cuisine",
+      period: "January - June 2025",
+      description: "Main responsibilities included receiving goods, storing them in the cold room following FIFO standards, and preparing items such as French fries, fish, and burgers. I worked at the cold, hot, and dessert stations, and performed opening and closing tasks. Duties also included deep cleaning, assisting the dishwasher, and taking out trash to city bins. All tasks were performed under HACCP regulations."
+    },
+    {
+      company: "El Buen Bife, Mexico City",
+      position: "Argentinian Kitchen Assistant",
+      period: "March 2022 – February 2023",
+      description: "Worked in an Argentinian-style steakhouse in Mexico City, assisting with meat preparation, grilling, and side dishes. Responsibilities included station setup, ingredient prep, supporting senior cooks during service, maintaining cleanliness and hygiene standards, and closing procedures."
+    },
+    {
+      company: "Italianni’s 222, Mexico City",
+      position: "Waiter",
+      period: "June 2012 – August 2014",
+      description: "Provided attentive customer service in a busy Italian restaurant. Responsibilities included suggestive selling, taking orders, serving food and beverages, cleaning the dining room, and supporting basic kitchen hygiene tasks."
+    }
+  ],
+  skills: [
+    { name: "Food Preparation", icon: "🍽️" },
+    { name: "Cold & Hot Station Work", icon: "🔥" },
+    { name: "Dishwashing Support", icon: "🧽" },
+    { name: "Deep Cleaning", icon: "🧼" },
+    { name: "FIFO Inventory Management", icon: "📦" },
+    { name: "Trash Disposal", icon: "🗑️" },
+    { name: "HACCP Knowledge", icon: "📋" },
+    { name: "Dessert Station Assistance", icon: "🍰" },
+    { name: "Team Collaboration", icon: "🤝" },
+    { name: "Station Setup & Closing", icon: "⏱️" }
+  ],
+  phoneDisplay: "+33 7 59 63 65 02",
+  whatsappLink: "https://wa.me/33759636502"
+};
 
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
